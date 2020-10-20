@@ -1,0 +1,27 @@
+﻿using GP.Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GP.Console
+{
+    public class Chemical:Product
+    {
+        public string City { get; set; }
+        public string LabName { get; set; }
+        public string StreetAddress { get; set; }
+
+        public override void GetMyType()
+        {
+            System.Console.WriteLine(" CHEMICAL ");
+        }
+
+        public override void GetDetails()
+        {
+            base.GetDetails();
+            System.Console.WriteLine("LabName: "+LabName+" City : "+City + " StreetAdress "+StreetAddress);
+        }
+    }
+}
